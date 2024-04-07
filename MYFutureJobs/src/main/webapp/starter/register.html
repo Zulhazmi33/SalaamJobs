@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: #FCF6EF;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .card-body {
+            border: 2px solid black;
+            outline: #553E4E solid 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            max-width: 500px;
+            background-color: #dcd2c5;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 30px;
+        }
+        .role-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .role-button {
+            flex: 1;
+            border: 2px solid;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            padding: 10px 40px;
+            background-color: #829399;
+        }
+        .role-button:hover {
+            background-color: #AFDE5B !important;
+            color: white;
+            transform: translateY(-3px);
+            border: 2px solid black;
+        }
+        form {
+            margin-top: 30px;
+        }
+        form table {
+            width: 100%;
+        }
+        form table th {
+            width: 30%;
+            text-align: left;
+            padding-right: 20px;
+        }
+        form table td {
+            padding-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #AFDE5B;
+            outline: 2px solid black;
+            color: white;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 50px;
+            transition: transform 0.3s;
+            
+        }
+        input[type="submit"]:hover {
+            transform: scale(1.05);
+        }
+        input:focus, textarea:focus {
+            background-color: lightblue;
+        }
+        p, a {
+            margin-left: 10px;
+            font-size: 15px;
+            color: black;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #2E8540;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card-body">
+                <h1>Register</h1>
+                <div class="role">
+                    <table>
+                        <tr>
+                            <td><button class="role-button" id="student" onclick="roleLink('student')" style="background-color:#AFDE5B">Student</button></td>
+                            <td><button class="role-button" id="staff" onclick="roleLink('staff')">Staff</button></td>
+                            <td><button class="role-button" id="admin" onclick="roleLink('admin')">Admin</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <form id="form" action="login.html" method="POST" onsubmit="return validateForm()">
+                    <table>
+                        <tr>
+                            <th>Username</th>
+                            <td><input class="form-control" type="text" name="username" placeholder="Enter full name" maxlength="50" required></td>
+                        </tr>
+                        <tr>
+                            <th>Password</th>
+                            <td><input class="form-control" type="password" id="password1" name="password1" placeholder="- - - - - - - - - -" maxlength="20" required></td>
+                        </tr>
+                        <tr>
+                            <th>Re-enter</th>
+                            <td><input class="form-control" type="password" id="password2" name="password2" placeholder="- - - - - - - - - -" maxlength="20" required></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td><input class="form-control" type="email" name="email" placeholder="something@gmail.com" maxlength="20" required></td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Register">
+                    <p>Already have an account?<a href="../starter/login.html">Click here</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function roleLink(roleButton) {
+        var buttons = document.querySelectorAll('.role button');
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].style.backgroundColor = "#829399";
+        }
+        document.getElementById(roleButton).style.backgroundColor = "#AFDE5B";
+    }
+
+    function validateForm() {
+        var password1 = document.getElementById("password1").value;
+        var password2 = document.getElementById("password2").value;
+
+        if (password1 !== password2) {
+            alert("Passwords do not match!");
+            return false;
+        }
+        else if (password1 === password2) {
+            alert("Form submitted!");
+            return true;
+        }
+
+        return true;
+    }
+</script>
+
+</body>
+</html>
+

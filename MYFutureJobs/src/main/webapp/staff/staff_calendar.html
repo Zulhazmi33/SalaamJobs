@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Navbar styles */
+        .navbar {
+            background-color: #59411D !important;
+            padding: 15px;
+        }
+        .navbar a {
+            color: white !important;
+            font-size: 20px;
+            width: 200px;
+            text-align: center;
+            border-radius: 40px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #D2F1E4 !important;
+            color: black !important;
+        }
+        /*Gunakan setiap kali tukar page, ada aura hijau2 keliling dia, menandakan kita dah masuk ke sesuatu specific page tersebut*/
+        .highlighted {
+            background-color: #D89239;
+            color: #fff;
+            border-radius: 40px;
+        }
+    </style>
+    <style>
+        /* General styles */
+        body {
+            background-color: #DED9D4; /* Background color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1, p {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+            width: 100px;
+            text-align: center;
+            max-width: 80px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        #addRow, 
+        #updateData {
+            padding: 5px 10px;
+            border: none;
+            background-color: #AFDE5B;
+            color: white;
+            cursor: pointer;
+            height: 50px;
+            width: 100px;
+            border-radius: 25px;
+            transition: transform 0.3s;
+        }
+        #addRow:hover,
+        #updateData:hover {
+            transform: scale(1.1);
+        }
+        textarea {
+            width: 50px; /* Initial width */
+            min-width: 50px; /* Minimum width */
+            max-width: 300px; /* Maximum width */
+            resize: horizontal; /* Allow horizontal resizing */
+        }
+        #logout {
+            transition: opacity 0.3s;
+        }
+        #logout:hover {
+            background-color: inherit !important;
+            opacity: 0.7;
+        }
+        
+        
+        .January {background-color: #0696BB}
+        .February {background-color: #2A71AF}
+        .March {background-color: #454E99}
+        .April {background-color: #6D398B}        
+        .May {background-color: #C5037D}        
+        .June {background-color: #E32322}        
+        .July {background-color: #E96220}        
+        .August {background-color: #F28E1C}        
+        .September {background-color: #FDC60A}        
+        .October {background-color: #F4E300}        
+        .November {background-color: #8DBB25}        
+        .December { background-color: #008F5A}
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto"> <!-- Add mr-auto class to the unordered list -->
+                <li class="nav-item">   <a class="nav-link" href="StaffMainMenu.html">SalaamJobs</a></li>
+                <li class="nav-item">   <a class="nav-link" href="staff_chat.html">Chat</a></li> 
+                <li class="nav-item">   <a class="nav-link highlighted" href="staff_calendar.html">Calendar</a></li>
+                <li class="nav-item">   <a class="nav-link" href="staff_jobCareer.html">Activity</a></li>
+            </ul>
+            <ul class="navbar-nav"> <!-- Add a new unordered list for the "Logo" link -->
+                <li class="nav-item"><a href="../starter/login.html" id="logout">
+                    <img     
+                        src="../image/logo.png"
+                        alt=""
+                        style="width: 45px; height: 45px"
+                        /> </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="row">
+        <div class="container">
+            <h1>Calendar</h1>
+            <button id="updateData" onclick="updateCalendar()">Update</button>
+            <button id="addRow" onclick="addRow()">Add Row</button>
+
+            <br><br>
+            <table>
+                <tr>
+                    <th class="January">January</th>
+                    <th class="February">February</th>
+                    <th class="March">March</th>
+                    <th class="April">April</th>
+                    <th class="May">May</th>
+                    <th class="June">June</th>
+                    <th class="July">July</th>
+                    <th class="August">August</th>
+                    <th class="September">September</th>
+                    <th class="October">October</th>
+                    <th class="November">November</th>
+                    <th class="December">December</th>
+                </tr>
+            </table>
+        </div>
+    </div>       
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function addRow() {
+           var x=0;
+            var months = [
+                "January", 
+                "February", 
+                "March", 
+                "April", 
+                "May", 
+                "June", 
+                "July", 
+                "August", 
+                "September", 
+                "October", 
+                "November", 
+                "December"
+            ];
+            var table = document.querySelector('table');
+            var newRow = table.insertRow(-1); // -1 to insert at the end
+            var monthCells = document.querySelectorAll('th[class]');
+            monthCells.forEach(function(cell) {
+                var newCell = newRow.insertCell();
+                newCell.textContent = 'New date';
+                newCell.classList.add(months[x++]);
+            });
+            newRow = table.insertRow(-1); // -1 to insert at the end
+            monthCells.forEach(function(cell) {
+                var newCell = newRow.insertCell();
+                newCell.textContent = 'New Event';
+            });
+        }
+    </script>
+    <script>
+        var switching = "1";
+        var add = document.getElementById('addRow');
+        var update = document.getElementById('updateData');
+        
+        function updateCalendar() {
+            var cell = document.querySelectorAll('td');
+
+            if (switching === "1") {
+                // Change switch value
+                switching = "2";
+                
+                // Convert from text to textarea
+                cell.forEach(function(cell) {
+                    var cellText = cell.textContent;
+                    var textarea = document.createElement('textarea');
+                    textarea.type = 'text';
+                    textarea.value = cellText;
+                    textarea.setAttribute('style', cell.getAttribute('style'));
+                    textarea.id = cell.id;
+                    textarea.name = "event";
+
+                    // Store the original content in a data attribute
+                    cell.dataset.originalContent = cellText;
+
+                    // Replace cell content with textarea
+                    cell.textContent = '';
+                    cell.appendChild(textarea);
+                });
+            }else if (switching === "2") {
+                // Change switch value
+                switching = "1";
+                
+                // Convert from textarea to text
+                cell.forEach(function(cell) {
+                    var textarea = cell.querySelector('textarea');
+                    var cellText = textarea.value;
+                    var originalContent = cell.dataset.originalContent; // Retrieve original content
+
+                    var p = document.createElement('p');
+                    p.textContent = cellText !== '' ? cellText : originalContent; // Use original content if textarea is empty
+                    p.setAttribute('style', textarea.getAttribute('style'));
+                    p.id = textarea.id;
+
+                    // Replace textarea with cell content
+                    cell.textContent = '';
+                    cell.appendChild(p);
+                });
+            }
+            
+            if(switching === '1') {
+                add.style.display = 'inline-block';
+                update.style.display = 'inline-block';
+                
+                update.innerHTML = 'Update';
+            }else if(switching ==='2') {
+                add.style.display = 'none';
+                update.style.display = 'inline-block';
+                
+                update.innerHTML = 'Confirm';
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Graduate Home Page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            /* Navbar styles */
+            .navbar {
+                background-color: #59411D !important;
+                padding: 15px;
+            }
+            .navbar a {
+                color: white !important;
+                font-size: 20px;
+                width: 200px;
+                text-align: center;
+                border-radius: 40px;
+                transition: background-color 0.3s;
+            }
+            .navbar a:hover {
+                background-color: #D2F1E4 !important;
+                color: black !important;
+            }
+            /*Gunakan setiap kali tukar page, ada aura hijau2 keliling dia, menandakan kita dah masuk ke sesuatu specific page tersebut*/
+            .highlighted {
+                background-color: #D89239;
+                color: #fff;
+                border-radius: 40px;
+            }
+            #logout {
+                transition: opacity 0.3s;
+            }
+            #logout:hover {
+                background-color: inherit !important;
+                opacity: 0.7;
+            }
+        </style>
+	<style>
+            body {
+                background-color: #DED9D4;
+            }
+            .btn-lg {
+                    padding: 20px 40px;
+                    font-size: 24px;
+                    margin: 10px;
+            }
+	</style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto"> <!-- Add mr-auto class to the unordered list -->
+                <li class="nav-item">   <a class="nav-link highlighted" href="GraduateMainMenu.html">SalaamJobs</a></li>
+                <li class="nav-item">   <a class="nav-link" href="graduate_chat.html">Chat</a></li> 
+                <li class="nav-item">   <a class="nav-link" href="graduate_calendar.html">Calendar</a></li>
+                <li class="nav-item">   <a class="nav-link" href="graduate_jobCareer.html">Activity</a></li>
+            </ul>
+            <ul class="navbar-nav"> <!-- Add a new unordered list for the "Logo" link -->
+                <li class="nav-item"><a href="../starter/login.html" id="logout">
+                    <img     
+                        src="../image/logo.png"
+                        alt=""
+                        style="width: 45px; height: 45px"
+                        /> </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-4">
+                            <a href="graduate_chat.html"><button class="btn btn-primary btn-lg btn-block">Chat</button></a>
+			</div>
+			<div class="col-md-4">
+                            <a href="graduate_calendar.html">  <button class="btn btn-primary btn-lg btn-block"> Calendar</button></a>
+			</div>
+			<div class="col-md-4">
+                            <a href="graduate_jobCareer.html"><button class="btn btn-primary btn-lg btn-block">Activity</button><a>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

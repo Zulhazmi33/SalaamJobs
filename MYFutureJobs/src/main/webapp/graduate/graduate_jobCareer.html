@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Navbar styles */
+        .navbar {
+            background-color: #59411D !important;
+            padding: 15px;
+        }
+        .navbar a {
+            color: white !important;
+            font-size: 20px;
+            width: 200px;
+            text-align: center;
+            border-radius: 40px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #D2F1E4 !important;
+            color: black !important;
+        }
+        /*Gunakan setiap kali tukar page, ada aura hijau2 keliling dia, menandakan kita dah masuk ke sesuatu specific page tersebut*/
+        .highlighted {
+            background-color: #D89239;
+            color: #fff;
+            border-radius: 40px;
+        }
+    </style>
+    <style>
+        /* General styles */
+        body {
+            background-color: #DED9D4; /* Background color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1, p {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            border-radius: 25px;
+        }
+    </style>
+    <style>
+        .container {
+            transition: background-color 0.3s;
+        }
+        .container button {
+            width: 200px;
+            height: 100px;
+            font-size: 15px;
+            border-radius: 0px;
+            border: 1px black;
+            cursor: pointer;
+            float: left;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #AFDE5B !important;
+        }
+        #blackScreen {
+            width: 605px;
+            background-color: black !important; 
+            color: white;
+            cursor: auto;
+            border-radius: 0 0 0 25px;
+        }
+        #submission  {
+            width: 400px;
+            background-color: #D89239; 
+            cursor: pointer;
+            border-radius: 0 0 25px 0;
+        }
+        #blackScreen,
+        #submission {
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+        textarea {
+            width: 1000px;
+            height: 400px;
+            resize: none;
+            display: none; 
+            margin: 0 auto;
+            text-align: center;
+            font-size: 40px;
+            padding: 30px;
+            background-color: #f0f0f0;
+            border: 2px solid #ccc; /* Add border for better visibility */
+            display: none;
+            border-radius: 25px 25px 0 0;
+            opacity: 0;
+            transition: 0.3s;
+        }        
+        
+        #logout {
+            transition: opacity 0.3s;
+        }
+        #logout:hover {
+            background-color: inherit !important;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto"> <!-- Add mr-auto class to the unordered list -->
+                <li class="nav-item">   <a class="nav-link" href="GraduateMainMenu.html">SalaamJobs</a></li>
+                <li class="nav-item">   <a class="nav-link" href="graduate_chat.html">Chat</a></li> 
+                <li class="nav-item">   <a class="nav-link" href="graduate_calendar.html">Calendar</a></li>
+                <li class="nav-item">   <a class="nav-link highlighted" href="graduate_jobCareer.html">Activity</a></li>
+            </ul>
+            <ul class="navbar-nav"> <!-- Add a new unordered list for the "Logo" link -->
+                <li class="nav-item"><a href="../starter/login.html" id="logout">
+                    <img     
+                        src="../image/logo.png"
+                        alt=""
+                        style="width: 45px; height: 45px"
+                        /> </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="row">
+        <div class="container">
+            <table>
+                <tr>
+                    <td colspan="5"><textarea id="scopeTextArea" readonly>The scope of Entrepreneurship and Startups includes identifying opportunities, creating innovative solutions, and building and managing new businesses or ventures.</textarea></td>
+                </tr>
+                <tr>
+                    <td><button id='hai' style="border-radius: 25px 0 0 0" onclick="showScope('Information Technology (IT)')">Information Technology (IT)</button></td>
+                    <td><button onclick="showScope('Healthcare and Medicine')">Healthcare and Medicine</button></td>
+                    <td><button onclick="showScope('Education and Teaching')">Education and Teaching</button></td>
+                    <td><button onclick="showScope('Engineering')">Engineering</button></td>
+                    <td><button style="border-radius: 0 25px 0 0" onclick="showScope('Finance and Accounting')">Finance and Accounting</button></td>
+                </tr>  
+                <tr>
+                    <td><button onclick="showScope('Sales and Marketing')">Sales and Marketing</button></td>
+                    <td><button onclick="showScope('Customer Service')">Customer Service</button></td>
+                    <td><button onclick="showScope('Human Resources')">Human Resources</button></td>
+                    <td><button onclick="showScope('Administration and Office Support')">Administration and Office Support</button></td>
+                    <td><button onclick="showScope('Legal Services')">Legal Services</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="showScope('Hospitality and Tourism')">Hospitality and Tourism</button></td>
+                    <td><button onclick="showScope('Manufacturing and Production')">Manufacturing and Production</button></td>
+                    <td><button onclick="showScope('Retail and Merchandising')">Retail and Merchandising</button></td>
+                    <td><button onclick="showScope('Transportation and Logistics')">Transportation and Logistics</button></td>
+                    <td><button onclick="showScope('Media and Communication')">Media and Communication</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="showScope('Construction and Trades')">Construction and Trades</button></td>
+                    <td><button onclick="showScope('Government and Public Administration')">Government and Public Administration</button></td>
+                    <td><button onclick="showScope('Research and Development')">Research and Development</button></td>
+                    <td><button onclick="showScope('Consulting')">Consulting</button></td>
+                    <td><button onclick="showScope('Entrepreneurship and Startups')">Entrepreneurship and Startups</button></td>
+                </tr>
+
+                <tr>
+                    <td colspan="3"><button id="blackScreen"> Scope of a job </button></td>
+                    <td colspan="2"><button id="submission" onclick="generateRandomValue()"> Pick for me </button></td>
+                </tr>
+            </table>
+            
+	</div>
+    </div>       
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showScope(jobScope) {
+            var scope;
+            //Manipulate job's scope
+            switch(jobScope) {
+                case 'Information Technology (IT)':
+                    scope = 'The scope of Information Technology (IT) involves designing, developing, managing, and maintaining computer-based information systems.'; 
+                    break;
+                case 'Healthcare and Medicine':
+                    scope = 'The scope of Healthcare and Medicine includes diagnosing, treating, and preventing illnesses, injuries, and diseases to improve overall health and well-being.';
+                    break;
+                case 'Education and Teaching':
+                    scope = 'The scope of Education and Teaching encompasses educating and instructing individuals of various ages and backgrounds in academic and vocational subjects.';
+                    break;
+                case 'Engineering':
+                    scope = 'The scope of Engineering involves applying scientific and mathematical principles to design, develop, and maintain structures, machines, systems, and processes.';
+                    break;
+                case 'Finance and Accounting':
+                    scope = 'The scope of Finance and Accounting includes managing financial transactions, records, and reports to ensure accurate financial planning, analysis, and decision-making.';
+                    break;
+                case 'Sales and Marketing':
+                    scope = 'The scope of Sales and Marketing involves promoting and selling products or services to customers through various channels and strategies.';
+                    break;
+                case 'Customer Service':
+                    scope = 'The scope of Customer Service includes assisting and supporting customers before, during, and after purchasing products or services to ensure satisfaction and loyalty.';
+                    break;
+                case 'Human Resources':
+                    scope = 'The scope of Human Resources encompasses managing personnel-related tasks, such as recruitment, training, compensation, and employee relations, to support organizational goals.';
+                    break;
+                case 'Administration and Office Support':
+                    scope = 'The scope of Administration and Office Support involves performing administrative tasks, such as data entry, scheduling, filing, and communication, to facilitate organizational operations.';
+                case 'Legal Services':
+                    scope = 'The scope of Legal Services includes providing legal advice, representation, and assistance to individuals, businesses, and organizations in matters related to law and regulations.';
+                case 'Hospitality and Tourism':
+                    scope = 'The scope of Hospitality and Tourism involves providing services and accommodations to guests and travelers to ensure enjoyable and comfortable experiences.';
+                    break;
+                case 'Manufacturing and Production':
+                    scope = 'The scope of Manufacturing and Production includes designing, producing, and assembling goods or products using various materials, tools, and processes.';
+                    break;
+                case 'Retail and Merchandising':
+                    scope = 'The scope of Retail and Merchandising involves selling and promoting goods or products to customers through physical or online stores, focusing on product presentation, pricing, and promotion.';
+                    break;
+                case 'Transportation and Logistics':
+                    scope = 'The scope of Transportation and Logistics encompasses managing and coordinating the movement of goods and people from one location to another efficiently and safely.';
+                    break;
+                case 'Media and Communication':
+                    scope = 'The scope of Media and Communication involves creating, distributing, and managing content through various media channels to inform, entertain, or persuade audiences.';
+                    break;
+                case 'Construction and Trades':
+                    scope = 'The scope of Construction and Trades includes building, repairing, and maintaining structures, infrastructure, and systems using specialized skills, tools, and techniques.';
+                    break;
+                case 'Government and Public Administration':
+                    scope = 'The scope of Government and Public Administration involves managing and overseeing public policies, services, and resources to address the needs and interests of citizens and communities.';
+                    break;
+                case 'Research and Development':
+                    scope = 'The scope of Research and Development encompasses conducting scientific investigations, experiments, and studies to discover new knowledge, technologies, and innovations.';
+                    break;
+                case 'Consulting':
+                    scope = 'The scope of Consulting involves providing expert advice, guidance, and solutions to individuals, businesses, or organizations in specific areas or industries to improve performance or solve problems.';
+                    break;
+                case 'Entrepreneurship and Startups':
+                    scope = 'The scope of Entrepreneurship and Startups includes identifying opportunities, creating innovative solutions, and building and managing new businesses or ventures.';
+            }
+            // Hide all buttons
+            var buttons = document.querySelectorAll('.container button');
+            buttons.forEach(function(button) {
+                if (button.id !== 'blackScreen' && button.id !== 'submission') {
+                    button.style.opacity = 0;
+                }
+            });
+
+            setTimeout(function() {
+                buttons.forEach(function(button) {
+                    if (button.id !== 'blackScreen' && button.id !== 'submission') {
+                        button.style.display = 'none';
+                    }
+                });
+                // Show textarea with scope
+                var scopeTextArea = document.getElementById('scopeTextArea');
+                scopeTextArea.innerHTML = scope;
+                scopeTextArea.style.display = 'block';
+                scopeTextArea.style.opacity = 0;
+
+            }, 300);
+            setTimeout(function() {
+                // Show textarea with scope
+                scopeTextArea.style.opacity = 1;
+                //Manipulate blackScreen and submission button
+                var blackButton = document.getElementById('blackScreen');
+                var subButton = document.getElementById('submission');
+                blackButton.innerHTML = jobScope;
+                subButton.innerHTML = "Revert back";
+
+                // Swap function()
+                subButton.onclick = function() {
+                    revert();
+                };
+            }, 600);
+        }
+    </script>
+    <script>
+        function revert() {
+            // Hide textarea with scope
+            var scopeTextArea = document.getElementById('scopeTextArea');
+            scopeTextArea.style.opacity = '0'; 
+            
+            setTimeout(function() {
+                scopeTextArea.style.display = 'none';
+            
+                var buttons = document.querySelectorAll('.container button');
+                buttons.forEach(function(button) {
+                    if (button.id !== 'blackScreen' && button.id !== 'submission') {
+                        button.style.display = 'block';
+                        button.style.opacity = 0;
+                    }
+                });
+            }, 300);
+        
+      
+            setTimeout(function() {
+                var buttons = document.querySelectorAll('.container button');
+                buttons.forEach(function(button) {
+                    if (button.id !== 'blackScreen' && button.id !== 'submission') {
+                    button.style.opacity = 1;
+                    }
+                });
+            
+
+                //Manipulate blackScreen and submission button
+                var blackButton = document.getElementById('blackScreen');
+                var subButton = document.getElementById('submission');
+                blackButton.innerHTML = " Scope of a job ";
+                subButton.innerHTML = "Pick for me";
+
+                //Swap function()
+                subButton.onclick = function() {
+                    generateRandomValue();
+                };      
+            }, 600);
+        }
+    </script> 
+    <script>
+        // Array of jobValues
+        const jobValues = [
+            "Healthcare and Medicine",
+            "Education and Teaching",
+            "Engineering",
+            "Finance and Accounting",
+            "Sales and Marketing",
+            "Customer Service",
+            "Human Resources",
+            "Administration and Office Support",
+            "Legal Services",
+            "Hospitality and Tourism",
+            "Manufacturing and Production",
+            "Retail and Merchandising",
+            "Transportation and Logistics",
+            "Media and Communication",
+            "Construction and Trades",
+            "Government and Public Administration",
+            "Research and Development",
+            "Consulting",
+            "Entrepreneurship and Startups"
+        ];
+
+
+        // Function to generate random index
+        function getRandomIndex() {
+            return Math.floor(Math.random() * jobValues.length);
+        }
+
+        // Function to handle button click
+        function generateRandomValue() {
+            // Get random index
+            const randomIndex = getRandomIndex();
+            // Get random value from array
+            const randomValue = jobValues[randomIndex];
+            // Display random value
+            showScope(randomValue);
+        }
+    </script>
+</body>
+</html>
+

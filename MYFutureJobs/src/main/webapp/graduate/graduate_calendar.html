@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Navbar styles */
+        .navbar {
+            background-color: #59411D !important;
+            padding: 15px;
+        }
+        .navbar a {
+            color: white !important;
+            font-size: 20px;
+            width: 200px;
+            text-align: center;
+            border-radius: 40px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #D2F1E4 !important;
+            color: black !important;
+        }
+        /*Gunakan setiap kali tukar page, ada aura hijau2 keliling dia, menandakan kita dah masuk ke sesuatu specific page tersebut*/
+        .highlighted {
+            background-color: #D89239;
+            color: #fff;
+            border-radius: 40px;
+        }
+    </style>
+    <style>
+        /* General styles */
+        body {
+            background-color: #DED9D4; /* Background color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1, p {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+            width: 100px;
+            text-align: center;
+            max-width: 80px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        textarea {
+            width: 50px; /* Initial width */
+            min-width: 50px; /* Minimum width */
+            max-width: 300px; /* Maximum width */
+            resize: horizontal; /* Allow horizontal resizing */
+        }
+        th {
+            color: white;
+        }
+        #logout {
+            transition: opacity 0.3s;
+        }
+        #logout:hover {
+            background-color: inherit !important;
+            opacity: 0.7;
+        }
+        
+        
+        .January {background-color: #0696BB}
+        .February {background-color: #2A71AF}
+        .March {background-color: #454E99}
+        .April {background-color: #6D398B}        
+        .May {background-color: #C5037D}        
+        .June {background-color: #E32322}        
+        .July {background-color: #E96220}        
+        .August {background-color: #F28E1C}        
+        .September {background-color: #FDC60A}        
+        .October {background-color: #F4E300}        
+        .November {background-color: #8DBB25}        
+        .December { background-color: #008F5A}
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto"> <!-- Add mr-auto class to the unordered list -->
+                <li class="nav-item">   <a class="nav-link" href="GraduateMainMenu.html">SalaamJobs</a></li>
+                <li class="nav-item">   <a class="nav-link" href="graduate_chat.html">Chat</a></li> 
+                <li class="nav-item">   <a class="nav-link highlighted" href="graduate_calendar.html">Calendar</a></li>
+                <li class="nav-item">   <a class="nav-link" href="graduate_jobCareer.html">Activity</a></li>
+            </ul>
+            <ul class="navbar-nav"> <!-- Add a new unordered list for the "Logo" link -->
+                <li class="nav-item"><a href="../starter/login.html" id="logout">
+                    <img     
+                        src="../image/logo.png"
+                        alt=""
+                        style="width: 45px; height: 45px"
+                        /> </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="row">
+        <div class="container">
+            <h1>Calendar</h1>
+
+            <br><br>
+            <table>
+                <tr>
+                    <th class="January">January</th>
+                    <th class="February">February</th>
+                    <th class="March">March</th>
+                    <th class="April">April</th>
+                    <th class="May">May</th>
+                    <th class="June">June</th>
+                    <th class="July">July</th>
+                    <th class="August">August</th>
+                    <th class="September">September</th>
+                    <th class="October">October</th>
+                    <th class="November">November</th>
+                    <th class="December">December</th>
+                </tr>
+                <tr>
+                    <th class="January"> 11/1/2024 </th>
+                    <th class="February"> 7/2/2024 </th>
+                    <th class="March"> 3/3/2024 </th>
+                    <th class="April"> 10/4/2024 </th>
+                    <th class="May"> 4/5/2024 </th>
+                    <th class="June"> 2/6/2024 </th>
+                    <th class="July"> 1/7/2024 </th>
+                    <th class="August"> 5/8/2024 </th>
+                    <th class="September"> 11/9/2024 </th>
+                    <th class="October"> 7/10/2024 </th>
+                    <th class="November"> 2/11/2024 </th>
+                    <th class="December"> 1/12/2024 </th>
+                </tr>
+                <tr>
+                    <td>Activity 1</td>
+                    <td>Activity 2</td>
+                    <td>Activity 3</td>
+                    <td>Activity 4</td>
+                    <td>Activity 5</td>
+                    <td>Activity 6</td>
+                    <td>Activity 7</td>
+                    <td>Activity 8</td>
+                    <td>Activity 9</td>
+                    <td>Activity 10</td>
+                    <td>Activity 11</td>
+                    <td>Activity 12</td>
+                </tr>
+                <tr>
+                    <th class="January"> 19/1/2024 </th>
+                    <th class="February"> 22/2/2024 </th>
+                    <th class="March"> 13/3/2024 </th>
+                    <th class="April"> 18/4/2024 </th>
+                    <th class="May"> 16/5/2024 </th>
+                    <th class="June"> 10/6/2024 </th>
+                    <th class="July"> 7/7/2024 </th>
+                    <th class="August"> 14/8/2024 </th>
+                    <th class="September"> 26/9/2024 </th>
+                    <th class="October"> 11/10/2024 </th>
+                    <th class="November"> 15/11/2024 </th>
+                    <th class="December"> 23/12/2024 </th>
+                </tr>
+                <tr>
+                    <td>Activity 13</td>
+                    <td>Activity 14</td>
+                    <td>Activity 15</td>
+                    <td>Activity 16</td>
+                    <td>Activity 17</td>
+                    <td>Activity 18</td>
+                    <td>Activity 19</td>
+                    <td>Activity 20</td>
+                    <td>Activity 21</td>
+                    <td>Activity 22</td>
+                    <td>Activity 23</td>
+                    <td>Activity 24</td>
+                </tr>
+            </table>
+        </div>
+    </div>       
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
